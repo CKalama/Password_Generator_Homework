@@ -22,3 +22,7 @@
 .content h2 {
     text-align:center;
 }
+
+#length {
+    display:inline-block;
+}

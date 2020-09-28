@@ -1,17 +1,15 @@
 // generating random password 
+ //possible password values
+    var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var specialChars = "!@#$%^&*()+-";
+    var numbers = "1234567890";
 
 function generatePass () {
     //set password length/complexity
     let complexity = document.getElementById("slider").value;
 
-
-    //possible password values
-    // const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    // const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    // const specialChars = "!@#$%^&*()+-";
-    // const numbers = "1234567890";
-
-    var values ="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-"
+var values="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-"
 
     let password ="";
 
@@ -29,4 +27,17 @@ function generatePass () {
 
 // Setting default length of display to middle 
 document.getElementById("length").innerHTML = "Length: 68";
+
+// function to set length based on slider position
+document.getElementById("slider").oninput = function sliderValue() {
+    if(document.getElementById("slider").value > 0) {
+        document.getElementById("length").innerHTML = "Length: " + document.getElementById("slider").value;
+    }
+
+}
+
+//trying to make this a variable so we dont need long code above ^ 
+// var sliderRange = document.getElementById("slider")
+
+
 
