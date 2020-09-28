@@ -1,21 +1,21 @@
 const slider = document.getElementById('slider')
 const display = document.getElementById('display')
+const generateButton = document.getElementById('generatePassword')
+const includeUpperCaseElement = document.getElementById('includeUpperCase')
+const includeLowerCaseElement = document.getElementById('includeLowerCase')
+const includeNumbersElement = document.getElementById('includeNumbers')
+const includeSymbolsElement = document.getElementById('includeSymbols')
 
-display.addEventListener('input', syncCharacterAmount)
+//Making the slider count what character they are on depending on the slider location
+
+// display.addEventListener('input', syncCharacterAmount)
 slider.addEventListener('input', syncCharacterAmount)
 
 function syncCharacterAmount(e) {
     var value = e.target.value;
-    display.value=value;
+    // display.value=value;
     slider.value=value;
 }
-
-
-
-
-
-
-
 //Slider length being shown.
 document.getElementById("length").innerHTML = "Length: 68";
 
@@ -25,3 +25,25 @@ document.getElementById("slider").oninput = function sliderValue() {
     }
 
 }
+
+// Generating a Password
+//To make sure that the page wont refresh or change when you submit
+generateButton.addEventListener('submit', e => {
+    e.preventDefault();
+    //Making Password accept all ids for buttons
+    const slider = slider.value;
+    const includeUpperCase = includeUpperCaseElement.checked;
+    const includeLowerCase = includeLowerCaseElement.checked;
+    const includeNumbers = includeNumbersElement.checked;
+    const includeSymbols = includeSymbolsElement.checked;
+
+    const password = generatePassword(slider, includeUpperCase, includeLowerCase, includeNumbers, includeSymbols)
+})
+
+
+
+
+
+
+
+
