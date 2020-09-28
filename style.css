@@ -1,4 +1,16 @@
 .navbar-style {
     border: 2px solid red;
-    
+    font-size:25px;
+}
+
+.content {
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:20px;
+    width:100%;
+    background-color:lightblue;
+}
+
+.content h2 {
+    text-align:center;
 }
