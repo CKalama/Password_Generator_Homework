@@ -40,6 +40,17 @@ generateButton.addEventListener('submit', e => {
     const password = generatePassword(slider, includeUpperCase, includeLowerCase, includeNumbers, includeSymbols)
 })
 
+function generatePassword(slider, includeUpperCase, includeLowerCase, includeNumbers, includeSymbols) {
+    let includeUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".charAt(Math.floor(Math.random() * Math.floor(values.length -1)));
+    let includeLowerCase = "abcdefghijklmnopqrstuvwxyz".charAt(Math.floor(Math.random() * Math.floor(values.length -1)));
+    let includeNumbers = "1234567890".charAt(Math.floor(Math.random() * Math.floor(values.length -1)));
+    let includeSymbols = "!@#$%^&*()_+".charAt(Math.floor(Math.random() * Math.floor(values.length -1)));
+
+    document.getElementById("display").value = password;
+
+
+}
+
 
 
 
