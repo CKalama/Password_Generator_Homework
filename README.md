@@ -3,6 +3,8 @@ Generate a Random Password with Customizable options!
 
 Deployed Link: https://ckalama.github.io/Password_Generator_Homework/
 
+Programming Tools: HTML, CSS, JS, Bootstrap (HTML/CSS Framework)
+
 Description: 
   This is a Password Generator Browser App. It allows the User to select the number of characters a password's length is, along with customizing what "literals" you would like in the Password generated (i.e Lowercase Letters, Uppercase Letters, Numbers, Special Characters). This was designed to test my Javascript logic knowledge. Attempting to create a fully rendered Webpage with minor Script Logic. This Browser was designed to push my abilities in designing a Page via HTML and CSS, while also incorporating Javascript to create functionality. 
   
