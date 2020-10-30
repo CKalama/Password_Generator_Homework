@@ -17,14 +17,14 @@ generateBtn.addEventListener("click", writePassword);
 
 // Need Variable for Special Characters ALL OF THESE WILL BE IN AN ARRAY
 //All of these will go into an Object that will be called in a separate function
-var specialCharacters =
+var specialCharacters = "!@#$%^&*()"
 
 // Variable for Numbers 
-var numberCharacters = 
+var numberCharacters = "1234567890"
 
 //Variable for Lower and Upper case
-var lowerCase = 
-var upperCase = 
+var lowerCase = "abcdefghijklmnopqrstuvwxyz"
+var upperCase = lowerCase.toUpperCase();
 
 
 //function for Amount of Characters 
