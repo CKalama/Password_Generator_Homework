@@ -45,6 +45,15 @@ if (parseInt(howMany) < 8 || parseInt(howMany) > 128 || howMany === NaN) {
   var numerics = confirm ("Would you like numerical data?");
   var specialChars = confirm ("would you like any special characters?");
 }
+  if(lowercase || uppercase || numerics || specialChars) {
+    if (lowercase) passwordBank += lowercaseBank;  // passwordBank = passwordBank + lowercaseBank;
+    if (uppercase) passwordBank += uppercaseBank;
+    if (numerics) passwordBank += numberBank;
+    if (specialChars) passwordBank += specialCharactersBank;
+
+    //Confirming that password is generated. However, it is not adhering to the numeric count the user is clicking and just generating as many characters are in the bank. 
+    console.log("Here is our answer!!!", passwordBank);
+  }
   
 }
 generatePassword();
