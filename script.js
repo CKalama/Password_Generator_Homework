@@ -13,15 +13,42 @@ function writePassword() {
 /// You will need 4 ifs to label each variable that the user may want. 
 
 var lowercaseBank = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseBank = lowerCase.toUpperCase();
+var uppercaseBank = lowercaseBank.toUpperCase();
 var specialCharactersBank = "!@#$%^&*()";
 var numberBank = "1234567890";
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
 
 // Need Variable for Special Characters ALL OF THESE WILL BE IN AN ARRAY
 //All of these will go into an Object that will be called in a separate function
+
+function generatePassword() {
+  var password = " ";
+  var passwordBank = " ";
+
+ var howMany = prompt("Hello! How many Characters would you like your password to be? (8-128)");
+
+ //console.log(howMany);
+
+//Checking if they inserted a number 8 through 128 and if its a number in general.
+
+
+if (parseInt(howMany) < 8 || parseInt(howMany) > 128 || howMany === NaN) {
+  alert("Error: Need a NUMBER between 1 and 128");
+  generatePassword();
+} else {
+
+  //Asking user which of selected options they would like 
+
+  var lowercase = confirm("Would you like lowercase letters?");
+  var uppercase = confirm("Would you like uppercase letters?");
+  var numerics = confirm ("Would you like numerical data?");
+  var specialChars = confirm ("would you like any special characters?");
+}
+  
+}
+generatePassword();
+
 
 
 // Variable for Numbers 
@@ -45,3 +72,6 @@ function userPasswordOptions() {
   }
   // Google Confirm Message,  
 }
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
