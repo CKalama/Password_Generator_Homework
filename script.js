@@ -7,7 +7,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+ 
 }
 
 /// You will need 4 ifs to label each variable that the user may want. 
@@ -44,7 +44,7 @@ if (parseInt(howMany) < 8 || parseInt(howMany) > 128 || howMany === NaN) {
   var uppercase = confirm("Would you like uppercase letters?");
   var numerics = confirm ("Would you like numerical data?");
   var specialChars = confirm ("would you like any special characters?");
-}
+
   if(lowercase || uppercase || numerics || specialChars) {
     if (lowercase) passwordBank += lowercaseBank;  // passwordBank = passwordBank + lowercaseBank;
     if (uppercase) passwordBank += uppercaseBank;
@@ -52,11 +52,21 @@ if (parseInt(howMany) < 8 || parseInt(howMany) > 128 || howMany === NaN) {
     if (specialChars) passwordBank += specialCharactersBank;
 
     //Confirming that password is generated. However, it is not adhering to the numeric count the user is clicking and just generating as many characters are in the bank. 
-    console.log("Here is our answer!!!", passwordBank);
+    //console.log("Here is our answer!!!", passwordBank);
+
+    for (let i = 0; i<howMany; i++) {  
+      var generateRandomNumber = Math.floor(Math.random() * passwordBank.length );
+      password += passwordBank[generateRandomNumber];
+    }
   }
+  console.log(password);
+  return password;
+  
+  } 
   
 }
-generatePassword();
+// generatePassword();
+// writePassword();
 
 
 
@@ -67,20 +77,20 @@ generatePassword();
 
 
 //function for Amount of Characters 
-function userPasswordOptions() {
-  var askLength= prompt("How Long do you want your password to be?")
-  //Need an If else block
-  if (isNaN (askLength)=== true) {
-    alert("Need a Number between 8 and 128!");
-    return;
-  } 
-  //Need to check if number is less than 8 and greater than 128
-  if (askLength<8 && askLength>128) {
-    alert("Need a number between 8 and 128!");
-    return;
-  }
-  // Google Confirm Message,  
-}
+// function userPasswordOptions() {
+//   var askLength= prompt("How Long do you want your password to be?")
+//   //Need an If else block
+//   if (isNaN (askLength)=== true) {
+//     alert("Need a Number between 8 and 128!");
+//     return;
+//   } 
+//   //Need to check if number is less than 8 and greater than 128
+//   if (askLength<8 && askLength>128) {
+//     alert("Need a number between 8 and 128!");
+//     return;
+//   }
+//   // Google Confirm Message,  
+// }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
